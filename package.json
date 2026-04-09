@@ -1,0 +1,60 @@
+{
+  "name": "my-skills",
+  "version": "1.0.0",
+  "description": "My Skills - Claude Code Skill Manager",
+  "main": "electron.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder"
+  },
+  "keywords": ["electron", "skills", "claude"],
+  "author": "sunlc",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "simple-git": "^3.20.0",
+    "open": "^8.4.0"
+  },
+  "build": {
+    "appId": "com.myskills.app",
+    "productName": "MySkills",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron.js",
+      "preload.js",
+      "package.json",
+      "server/**/*",
+      "public/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "server",
+        "to": "server",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "public",
+        "to": "public",
+        "filter": ["**/*"]
+      }
+    ],
+    "win": {
+      "target": ["nsis"],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "perMachine": false
+    }
+  }
+}
