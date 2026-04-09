@@ -18,7 +18,8 @@
 
 ## 截图
 
-![界面预览](https://via.placeholder.com/800x500?text=MySkills+Screenshot)
+<img width="1712" height="673" alt="image" src="https://github.com/user-attachments/assets/ba4e9724-b8a8-44c1-bdc1-95338da68926" />
+
 
 ## 安装
 
